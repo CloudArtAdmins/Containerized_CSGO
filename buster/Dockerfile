@@ -1,7 +1,7 @@
 ###########################################################
 # Dockerfile that builds a CSGO Gameserver
 ###########################################################
-FROM cm2network/steamcmd:root
+FROM steamcmd-root
 
 LABEL maintainer="walentinlamonos@gmail.com"
 
@@ -16,9 +16,9 @@ ENV DLURL https://raw.githubusercontent.com/CM2Walki/CSGO
 RUN set -x \
 	&& apt-get update \
 	&& apt-get install -y --no-install-recommends --no-install-suggests \
-		wget=1.20.1-1.1 \
-		ca-certificates=20190110 \
-		lib32z1=1:1.2.11.dfsg-1 \
+		wget \
+		ca-certificates \
+		lib32z1 \
 	&& mkdir -p "${STEAMAPPDIR}" \
 	&& wget --max-redirect=30 "${DLURL}/master/etc/entry.sh" -O "${HOMEDIR}/entry.sh" \
 	&& { \
