@@ -1,4 +1,4 @@
-FROM cm2network/csgo:latest
+FROM docker.io/farrahscloudart/csgo:latest
 
 ENV METAMOD_VERSION 1.11
 

@@ -1,9 +1,7 @@
 ###########################################################
 # Dockerfile that builds a CSGO Gameserver
 ###########################################################
-FROM steamcmd-root
-
-LABEL maintainer="walentinlamonos@gmail.com"
+FROM docker.io/farrahscloudart/steamcmd:root
 
 ENV STEAMAPPID 740
 ENV STEAMAPP csgo
